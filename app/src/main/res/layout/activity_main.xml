@@ -11,29 +11,38 @@
         android:id="@+id/article_heading"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp"
         android:background="@color/design_default_color_primary"
+        android:padding="10dp"
         android:text="@string/article_title"
         android:textAppearance="@android:style/TextAppearance.Large"
         android:textColor="@android:color/black"
         android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/article_subheading"
-        android:layout_width="match_parent"
+    <ScrollView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/article_heading"
-        android:padding="3dp"
-        android:text="@string/article_subtitle"
-        android:textAppearance="@android:style/TextAppearance" />
+        android:layout_below="@id/article_heading">
 
-    <ScrollView android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/article_subheading">
-    <TextView
-        android:id="@+id/article" android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:lineSpacingExtra="5sp" android:autoLink="web"
-        android:text="@string/article_text"/>
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/article_subheading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="@string/article_subtitle"
+                android:textAppearance="@android:style/TextAppearance" />
+
+            <TextView
+                android:id="@+id/article"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autoLink="web"
+                android:lineSpacingExtra="5sp"
+                android:text="@string/article_text" />
+        </LinearLayout>
+
     </ScrollView>
 </RelativeLayout>
